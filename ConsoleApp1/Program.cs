@@ -36,6 +36,18 @@
 
             long Y = X.Reverse();
             #endregion
+
+            #region Annynmous Type
+            //var employee = new {Id = 10, Name = "Ahmed", salary = 5000};
+
+            //Console.WriteLine(employee.Id);
+            //Console.WriteLine(employee); 
+
+            //int x =2;
+            //Console.WriteLine(employee.GetType().Name);
+            //employee.Id = 20; //Invalid
+           
+            #endregion
         }
     }
 }

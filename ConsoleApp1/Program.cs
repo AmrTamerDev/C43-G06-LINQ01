@@ -47,6 +47,9 @@
             Console.WriteLine(employee.GetType().Name);
             //employee.Id = 10; //Invalid
             employee = new { Id = 20, employee.Name, employee.Salary };
+            employee = employee with { Id = 30 };
+            var employee02 = new { Id = 90, Name = "Amr", Salary = 100000 }; //Anonymous Type
+            Console.WriteLine(employee02.GetType().Name);
             #endregion
         }
     }

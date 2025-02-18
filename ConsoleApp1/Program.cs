@@ -34,20 +34,20 @@
 
             //int y = X.Reverse();
 
-            long Y = X.Reverse();
+            //long Y = X.Reverse();
             #endregion
 
-            #region Annynmous Type
-            //var employee = new {Id = 10, Name = "Ahmed", salary = 5000};
-
-            //Console.WriteLine(employee.Id);
-            //Console.WriteLine(employee); 
-
-            //int x =2;
-            //Console.WriteLine(employee.GetType().Name);
-            //employee.Id = 20; //Invalid
-           
-            #endregion
+            #region Anonymous Type
+            //Employee employee = new Employee() { Id = 10, Name = "Ahmed", Salary = 10000 };
+            var employee = new { Id = 10, Name = "Ahmed", Salary = 10000 }; //Anonymous Type 
+            
+            Console.WriteLine(employee.Id);
+            Console.WriteLine(employee);
+            //Console.WriteLine(employee.Age); //Invalid
+            Console.WriteLine(employee.GetType().Name);
+            //employee.Id = 10; //Invalid
+            employee = new { Id = 20, employee.Name, employee.Salary };
+            #endregion
         }
     }
 }

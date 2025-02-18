@@ -35,5 +35,6 @@ namespace ConsoleApp1
 
             return ReversedNumber;
         }
+        
     }
 }

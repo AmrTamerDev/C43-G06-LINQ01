@@ -26,8 +26,16 @@
             #endregion
 
             #endregion
-            
 
+            #region Extension Method
+            int X = 123;
+            //int Y = IntExtensions.Reverse(X);
+            //Console.WriteLine(Y);
+
+            //int y = X.Reverse();
+
+            long Y = X.Reverse();
+            #endregion
         }
     }
 }

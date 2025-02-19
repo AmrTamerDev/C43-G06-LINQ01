@@ -51,6 +51,29 @@
             var employee02 = new { Id = 90, Name = "Amr", Salary = 100000 }; //Anonymous Type
             Console.WriteLine(employee02.GetType().Name);
             #endregion
+
+            #region LINQ
+            //Stands For Language Integrated Query
+            // +40 Extension Methods
+            //Extension methods for built in interface [IEnumerable]
+            //found at class [Enumerable]
+            //you can use "linq operations" against data [stored in sequence]
+            //regardless the source of data [SQL, Oracle, MySQL]
+            #region Sequence
+            //the object from class that implement built in interface [IEnumerable]
+            //1. Local [static L2O, XML L2Xml]
+            //2. Remote [from database L2EF]
+
+            #endregion
+
+            List <int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            var oddNumber = Numbers.Where(N => N % 2 == 1);
+
+            foreach (var number in oddNumber)
+            {
+                Console.WriteLine(number);
+            }
+            #endregion
         }
     }
 }

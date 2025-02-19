@@ -74,6 +74,24 @@
                 Console.WriteLine(number);
             }
             #endregion
+
+            #region LINQ Syntax
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //1. Fluent Syntax
+            //1.1 use linq operator as => static method through "Enumerable" class 
+            var OddNum = Enumerable.Where(numbers, N => N % 2 != 0);
+
+            //1.2 use linq operator as => Extension method
+            OddNum = numbers.Where(N => N % 2 != 0);
+
+            //2. Query Syntax
+            oddNumber = from N in numbers where N % 2 != 0 select N;
+            foreach (var number in OddNum)
+            {
+                Console.WriteLine(number);
+            }
+
+            #endregion
         }
     }
 }

@@ -92,6 +92,28 @@
             }
 
             #endregion
+
+            #region LINQ Excution Way
+            #region Deffered Execution
+            List<int> Nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var OddNumbers = Enumerable.Where(numbers, N => N % 2 != 0);
+            Numbers.AddRange(new int[] { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, });
+            foreach (var number in Numbers)
+            {
+                Console.WriteLine(number);
+            }
+            #endregion
+
+            #region Immediate Execution
+            List<int> Nums1 = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var OddNumbers1 = Enumerable.Where(numbers, N => N % 2 != 0).ToList();
+            Numbers.AddRange(new int[] { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, });
+            foreach (var number in Numbers)
+            {
+                Console.WriteLine(number);
+            }
+            #endregion
+            #endregion
         }
     }
 }
